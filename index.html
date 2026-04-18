@@ -55,6 +55,614 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--black);font-fa
 .btn-black{background:var(--black);color:var(--white);}
 .btn-ghost{background:rgba(245,242,237,.08);color:var(--white);border:.5px solid rgba(245,242,237,.2);}
 .btn-outline{background:transparent;color:var(--black);border:.5px solid rgba(13,13,13,.2);}
+
+/* ── FIELDS ── */
+.field-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-bottom:7px;}
+.field-input{width:100%;background:var(--cream);border:.5px solid var(--border);border-radius:12px;padding:13px 16px;font-family:'Syne',sans-serif;font-size:14px;color:var(--black);margin-bottom:16px;outline:none;-webkit-appearance:none;}
+.field-input:focus{border-color:var(--orange);}
+.field-input.error{border-color:var(--red);}
+
+/* ── BACK BTN ── */
+.back-btn{display:flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--mid);cursor:pointer;background:none;border:none;padding:8px 24px 0;}
+
+/* ── SPLASH ── */
+#screen-splash{background:var(--black);}
+.splash-body{flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:32px 28px 48px;}
+.splash-logo{display:flex;align-items:baseline;}
+.splash-logo .fix{font-weight:800;font-size:72px;color:var(--white);letter-spacing:-.03em;}
+.splash-logo .o{font-family:'DM Serif Display',serif;font-style:italic;font-size:72px;color:var(--orange);letter-spacing:-.03em;}
+.splash-tagline{font-family:'DM Serif Display',serif;font-style:italic;font-size:22px;color:rgba(245,242,237,.45);line-height:1.3;margin-top:12px;}
+.splash-cta{display:flex;flex-direction:column;gap:10px;}
+.splash-mono{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.2);text-align:center;margin-top:4px;}
+
+/* ── ROLE ── */
+#screen-role{background:var(--white);}
+.onboard-body{flex:1;padding:12px 24px 36px;display:flex;flex-direction:column;}
+.step-row{display:flex;align-items:center;gap:8px;margin-bottom:24px;}
+.step-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);}
+.step-dots{display:flex;gap:5px;}
+.sdot{height:4px;border-radius:2px;}
+.sdot.active{background:var(--orange);width:28px;}
+.sdot.done{background:var(--black);width:20px;}
+.sdot.todo{background:var(--border);width:20px;}
+.screen-title{font-weight:800;font-size:28px;color:var(--black);letter-spacing:-.02em;line-height:1.15;margin-bottom:8px;}
+.screen-sub{font-size:14px;color:var(--mid);line-height:1.5;margin-bottom:24px;}
+.role-cards{display:flex;flex-direction:column;gap:12px;flex:1;}
+.role-card{border:.5px solid var(--border);border-radius:16px;padding:18px 20px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:all .18s;background:var(--cream);}
+.role-card.selected{border:2px solid var(--orange);background:rgba(232,83,26,.04);}
+.role-icon{width:44px;height:44px;border-radius:12px;background:var(--black);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.role-info{flex:1;}
+.role-name{font-weight:700;font-size:15px;color:var(--black);margin-bottom:3px;}
+.role-desc{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;color:var(--mid);}
+.role-check{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border);flex-shrink:0;transition:all .18s;}
+.role-card.selected .role-check{background:var(--orange);border-color:var(--orange);}
+.btn-wrap{margin-top:24px;}
+
+/* ── LOGIN / REGISTER ── */
+#screen-login,#screen-register,#screen-otp{background:var(--white);}
+.auth-body{flex:1;padding:8px 24px 36px;display:flex;flex-direction:column;}
+.login-logo{display:flex;align-items:baseline;margin-bottom:6px;}
+.login-logo .fix{font-weight:800;font-size:34px;color:var(--black);letter-spacing:-.03em;}
+.login-logo .o{font-family:'DM Serif Display',serif;font-style:italic;font-size:34px;color:var(--orange);letter-spacing:-.03em;}
+.forgot-btn{font-family:'DM Mono',monospace;font-size:10px;color:var(--orange);letter-spacing:.1em;text-align:right;display:block;margin-top:-10px;margin-bottom:24px;background:none;border:none;cursor:pointer;width:100%;}
+.divider{display:flex;align-items:center;gap:12px;margin:16px 0;}
+.divider-line{flex:1;height:.5px;background:var(--border);}
+.divider-text{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);letter-spacing:.1em;}
+.wa-btn{width:100%;background:#25D366;color:white;border:none;border-radius:14px;padding:14px;font-family:'Syne',sans-serif;font-weight:600;font-size:14px;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;}
+.register-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--mid);text-align:center;margin-top:16px;}
+.register-link span{color:var(--orange);cursor:pointer;}
+.reg-badge{display:inline-flex;align-items:center;gap:6px;background:var(--cream);border:.5px solid var(--border);border-radius:20px;padding:6px 12px;margin-bottom:16px;}
+.reg-badge-dot{width:8px;height:8px;border-radius:50%;background:var(--orange);}
+.reg-badge-text{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);}
+.phone-row{display:flex;gap:8px;margin-bottom:16px;}
+.phone-prefix{background:var(--cream);border:.5px solid var(--border);border-radius:12px;padding:13px 14px;font-size:14px;color:var(--mid);white-space:nowrap;}
+.phone-input{flex:1;background:var(--cream);border:.5px solid var(--orange);border-radius:12px;padding:13px 16px;font-family:'Syne',sans-serif;font-size:14px;color:var(--black);outline:none;}
+.terms-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;}
+.terms-check{width:18px;height:18px;border-radius:5px;border:1.5px solid var(--orange);background:rgba(232,83,26,.1);flex-shrink:0;margin-top:1px;cursor:pointer;}
+.terms-check.checked{background:var(--orange);}
+.terms-text{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);line-height:1.6;letter-spacing:.04em;}
+.terms-text span{color:var(--orange);}
+
+/* ── OTP ── */
+.otp-info{background:var(--cream);border-radius:14px;padding:16px 18px;margin-bottom:24px;}
+.otp-info-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-bottom:4px;}
+.otp-info-val{font-weight:600;font-size:15px;color:var(--black);}
+.otp-inputs{display:flex;gap:10px;justify-content:center;margin-bottom:24px;}
+.otp-digit{width:48px;height:56px;border-radius:12px;border:.5px solid var(--border);background:var(--cream);font-family:'Syne',sans-serif;font-weight:700;font-size:24px;color:var(--black);text-align:center;outline:none;-webkit-appearance:none;}
+.otp-digit:focus{border-color:var(--orange);}
+.otp-resend{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);text-align:center;margin-top:12px;letter-spacing:.08em;}
+.otp-resend span{color:var(--orange);cursor:pointer;}
+
+/* ── HOME CLIENTE ── */
+#screen-home{background:var(--cream);}
+.home-header{background:var(--black);flex-shrink:0;}
+.hdr-inner{padding:4px 24px 24px;}
+.hdr-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.hdr-greeting{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.4);}
+.hdr-name{font-weight:800;font-size:22px;color:var(--white);letter-spacing:-.02em;margin-top:2px;}
+.avatar{width:38px;height:38px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:white;cursor:pointer;}
+.search-bar{background:rgba(245,242,237,.08);border:.5px solid rgba(245,242,237,.12);border-radius:12px;padding:11px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;}
+.search-txt{font-size:13px;color:rgba(245,242,237,.35);}
+.home-body{flex:1;padding:20px 20px 90px;}
+.sec-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-bottom:12px;}
+.promo{background:var(--orange);border-radius:16px;padding:18px 20px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;}
+.promo-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:4px;}
+.promo-title{font-weight:800;font-size:15px;color:white;line-height:1.2;}
+.promo-sub{font-size:12px;color:rgba(255,255,255,.65);margin-top:3px;}
+.promo-icon{width:48px;height:48px;background:rgba(255,255,255,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px;}
+.cat{background:var(--white);border-radius:12px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;border:.5px solid var(--border);transition:all .18s;}
+.cat.active{background:var(--black);border-color:var(--black);}
+.cat-ic{width:28px;height:28px;border-radius:8px;background:rgba(13,13,13,.06);display:flex;align-items:center;justify-content:center;}
+.cat.active .cat-ic{background:rgba(245,242,237,.12);}
+.cat-nm{font-weight:600;font-size:10px;color:var(--black);text-align:center;line-height:1.2;}
+.cat.active .cat-nm{color:var(--white);}
+.tech-list{display:flex;flex-direction:column;gap:10px;}
+.tcard{background:var(--white);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;border:.5px solid var(--border);cursor:pointer;}
+.tav{width:44px;height:44px;border-radius:12px;background:var(--black);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:var(--white);flex-shrink:0;}
+.tinf{flex:1;}
+.tnm{font-weight:700;font-size:13px;color:var(--black);}
+.tsp{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);margin-top:2px;letter-spacing:.04em;}
+.trt{display:flex;flex-direction:column;align-items:flex-end;gap:4px;}
+.star-badge{background:var(--black);color:var(--white);font-family:'DM Mono',monospace;font-size:10px;padding:4px 8px;border-radius:20px;}
+.tpr{font-weight:600;font-size:11px;color:var(--mid);}
+
+/* ── BOTTOM NAV ── */
+.bot-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:var(--white);border-top:.5px solid var(--border);padding:10px 0 24px;display:flex;justify-content:space-around;z-index:100;}
+.bn{display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;padding:2px 16px;}
+.bn-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);}
+.bn.active .bn-lbl{color:var(--orange);}
+.bn-dot{width:4px;height:4px;border-radius:50%;background:var(--orange);}
+.bot-nav.dark{background:rgba(13,13,13,.95);border-top:.5px solid rgba(245,242,237,.08);}
+.bot-nav.dark .bn-lbl{color:rgba(245,242,237,.3);}
+.bot-nav.dark .bn.active .bn-lbl{color:var(--orange);}
+
+/* ── PANEL TÉCNICO ── */
+#screen-tecnico{background:var(--black);}
+.tec-hdr{display:flex;justify-content:space-between;align-items:center;padding:12px 24px 20px;}
+.tec-greeting{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.4);}
+.tec-name{font-weight:800;font-size:20px;color:var(--white);letter-spacing:-.02em;margin-top:2px;}
+.badge-online{background:var(--orange);color:white;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:20px;border:none;cursor:pointer;}
+.tec-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 20px;margin-bottom:20px;}
+.stat-card{background:rgba(245,242,237,.06);border:.5px solid rgba(245,242,237,.1);border-radius:14px;padding:14px 16px;}
+.stat-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,242,237,.35);margin-bottom:6px;}
+.stat-val{font-weight:800;font-size:22px;color:var(--white);letter-spacing:-.02em;}
+.stat-sub{font-family:'DM Mono',monospace;font-size:9px;color:var(--orange);margin-top:2px;}
+.req-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,242,237,.35);padding:0 20px;margin-bottom:12px;}
+.req-cards{display:flex;flex-direction:column;gap:10px;padding:0 20px 100px;}
+.req-card{background:rgba(245,242,237,.06);border:.5px solid rgba(245,242,237,.1);border-radius:14px;padding:14px 16px;}
+.req-card.new{border-color:var(--orange);background:rgba(232,83,26,.08);}
+.req-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.req-nm{font-weight:700;font-size:13px;color:var(--white);}
+.req-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:10px;}
+.tag-new{background:rgba(232,83,26,.2);color:var(--orange);}
+.tag-prog{background:rgba(29,158,117,.15);color:var(--green);}
+.tag-done{background:rgba(245,242,237,.1);color:rgba(245,242,237,.4);}
+.req-svc{font-family:'DM Mono',monospace;font-size:10px;color:rgba(245,242,237,.4);letter-spacing:.06em;margin-bottom:8px;}
+.req-bot{display:flex;justify-content:space-between;align-items:center;}
+.req-addr{font-size:11px;color:rgba(245,242,237,.5);}
+.req-price{font-weight:700;font-size:13px;color:var(--white);}
+.req-btns{display:flex;gap:6px;margin-top:10px;}
+.rbtn-acc{flex:1;background:var(--orange);color:white;border:none;border-radius:10px;padding:9px;font-weight:700;font-size:12px;cursor:pointer;text-align:center;}
+.rbtn-dec{flex:1;background:rgba(245,242,237,.08);color:rgba(245,242,237,.5);border:.5px solid rgba(245,242,237,.12);border-radius:10px;padding:9px;font-weight:600;font-size:12px;cursor:pointer;text-align:center;}
+
+/* ── PERFIL USUARIO ── */
+#screen-mi-perfil{background:var(--white);}
+.perfil-user-hero{background:var(--black);padding:20px 24px 28px;flex-shrink:0;}
+.perfil-av-big{width:72px;height:72px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:28px;color:white;margin-bottom:12px;}
+.perfil-user-nm{font-weight:800;font-size:22px;color:var(--white);letter-spacing:-.02em;}
+.perfil-user-email{font-family:'DM Mono',monospace;font-size:11px;color:rgba(245,242,237,.4);margin-top:4px;}
+.perfil-user-rol{display:inline-flex;align-items:center;gap:6px;background:rgba(232,83,26,.15);border:.5px solid rgba(232,83,26,.3);border-radius:20px;padding:5px 12px;margin-top:10px;}
+.perfil-user-rol-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);}
+.perfil-user-rol-txt{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);}
+.perfil-body{flex:1;padding:24px;display:flex;flex-direction:column;gap:12px;}
+.perfil-item{background:var(--cream);border-radius:14px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+.perfil-item-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-bottom:3px;}
+.perfil-item-val{font-weight:600;font-size:14px;color:var(--black);}
+.logout-btn{width:100%;background:rgba(226,75,74,.1);color:var(--red);border:.5px solid rgba(226,75,74,.3);border-radius:14px;padding:15px;font-family:'Syne',sans-serif;font-weight:700;font-size:15px;cursor:pointer;text-align:center;margin-top:8px;}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+    <div class="loader-logo"><span class="fix">FIX</span><span class="o">o</span></div>
+    <div class="loader-spinner"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<div id="app">
+
+<!-- ══ SPLASH ══ -->
+<div class="screen" id="screen-splash">
+  <div class="status"><span class="status-time" style="color:#F5F2ED">9:41</span><div class="status-dots"><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div></div></div>
+  <div class="splash-body">
+    <div>
+      <div class="splash-logo"><span class="fix">FIX</span><span class="o">o</span></div>
+      <div class="splash-tagline">Tu casa siempre<br>en buenas manos.</div>
+    </div>
+    <div class="splash-cta">
+      <button class="btn btn-orange" onclick="nav('screen-role')">Comenzar →</button>
+      <button class="btn btn-ghost" onclick="nav('screen-login')">Ya tengo cuenta</button>
+      <div class="splash-mono">Culiacán, Sinaloa · 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SELECCIÓN DE ROL ══ -->
+<div class="screen" id="screen-role">
+  <div class="status"><span class="status-time" style="color:var(--black)">9:41</span><div class="status-dots"><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div></div></div>
+  <div class="onboard-body">
+    <div class="step-row"><span class="step-lbl">Paso 1 de 2</span><div class="step-dots"><div class="sdot active"></div><div class="sdot todo"></div></div></div>
+    <div class="screen-title">¿Cómo vas<br>a usar FIXo?</div>
+    <div class="screen-sub">Elige tu perfil para personalizar tu experiencia.</div>
+    <div class="role-cards">
+      <div class="role-card selected" id="card-cliente" onclick="selectRole('cliente')">
+        <div class="role-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5F2ED" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="role-info"><div class="role-name">Soy propietario</div><div class="role-desc">Necesito servicios para mi hogar</div></div>
+        <div class="role-check" id="check-cliente"></div>
+      </div>
+      <div class="role-card" id="card-tecnico" onclick="selectRole('tecnico')">
+        <div class="role-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5F2ED" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="role-info"><div class="role-name">Soy técnico</div><div class="role-desc">Ofrezco servicios profesionales</div></div>
+        <div class="role-check" id="check-tecnico"></div>
+      </div>
+    </div>
+    <div class="btn-wrap"><button class="btn btn-orange" onclick="nav('screen-register')">Continuar →</button></div>
+  </div>
+</div>
+
+<!-- ══ REGISTRO ══ -->
+<div class="screen" id="screen-register">
+  <div class="status"><span class="status-time" style="color:var(--black)">9:41</span><div class="status-dots"><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div></div></div>
+  <div class="auth-body">
+    <button class="back-btn" onclick="back()">← Atrás</button>
+    <div style="height:12px"></div>
+    <div class="step-row"><span class="step-lbl">Paso 2 de 2</span><div class="step-dots"><div class="sdot done"></div><div class="sdot active"></div></div></div>
+    <div class="reg-badge"><div class="reg-badge-dot"></div><div class="reg-badge-text" id="role-badge">Propietario</div></div>
+    <div class="screen-title" style="font-size:26px;margin-bottom:20px;">Crea tu<br>cuenta.</div>
+    <div class="field-label">Nombre completo</div>
+    <input class="field-input" id="reg-nombre" type="text" placeholder="Julio Landa" autocomplete="name">
+    <div class="field-label">Correo electrónico</div>
+    <input class="field-input" id="reg-email" type="email" placeholder="julio@correo.com" autocomplete="email">
+    <div class="field-label">Contraseña</div>
+    <input class="field-input" id="reg-password" type="password" placeholder="Mínimo 6 caracteres" autocomplete="new-password">
+    <div class="field-label">Teléfono (opcional)</div>
+    <div class="phone-row"><div class="phone-prefix">+52</div><input class="phone-input" id="reg-telefono" type="tel" placeholder="667 000 0000" autocomplete="tel"></div>
+    <div class="terms-row"><div class="terms-check" id="terms-check" onclick="toggleTerms()"></div><div class="terms-text">Acepto los <span>Términos de servicio</span> y el <span>Aviso de privacidad</span> de FIXo.</div></div>
+    <button class="btn btn-orange" id="btn-register" onclick="doRegister()">Crear cuenta →</button>
+    <div class="register-link" style="margin-top:16px;">¿Ya tienes cuenta? <span onclick="nav('screen-login')">Inicia sesión</span></div>
+  </div>
+</div>
+
+<!-- ══ LOGIN ══ -->
+<div class="screen" id="screen-login">
+  <div class="status"><span class="status-time" style="color:var(--black)">9:41</span><div class="status-dots"><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div></div></div>
+  <div class="auth-body">
+    <button class="back-btn" onclick="nav('screen-splash')">← Volver</button>
+    <div style="height:16px"></div>
+    <div class="login-logo"><span class="fix">FIX</span><span class="o">o</span></div>
+    <div class="screen-title" style="font-size:24px;margin-bottom:6px;">Bienvenido<br>de regreso.</div>
+    <div class="screen-sub" style="margin-bottom:24px;">Ingresa para ver tus servicios y técnicos disponibles.</div>
+    <div class="field-label">Correo electrónico</div>
+    <input class="field-input" id="login-email" type="email" placeholder="julio@correo.com" autocomplete="email">
+    <div class="field-label">Contraseña</div>
+    <input class="field-input" id="login-password" type="password" placeholder="••••••••" autocomplete="current-password">
+    <button class="forgot-btn" onclick="doForgotPassword()">¿Olvidaste tu contraseña?</button>
+    <button class="btn btn-black" id="btn-login" onclick="doLogin()">Entrar →</button>
+    <div class="register-link">¿No tienes cuenta? <span onclick="nav('screen-role')">Regístrate</span></div>
+  </div>
+</div>
+
+<!-- ══ HOME CLIENTE ══ -->
+<div class="screen" id="screen-home">
+  <div class="home-header">
+    <div class="status"><span class="status-time" style="color:#F5F2ED">9:41</span><div class="status-dots"><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div></div></div>
+    <div class="hdr-inner">
+      <div class="hdr-top">
+        <div><div class="hdr-greeting">Hola de nuevo</div><div class="hdr-name" id="home-nombre">Julio</div></div>
+        <div class="avatar" id="home-avatar" onclick="nav('screen-mi-perfil')">JL</div>
+      </div>
+      <div class="search-bar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(245,242,237,.35)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><div class="search-txt">¿Qué necesita tu casa hoy?</div></div>
+    </div>
+  </div>
+  <div class="home-body">
+    <div class="promo"><div><div class="promo-tag">Temporada de calor</div><div class="promo-title">Revisión de A/C<br>con descuento</div><div class="promo-sub">Técnicos disponibles hoy</div></div><div class="promo-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg></div></div>
+    <div class="sec-lbl">Servicios</div>
+    <div class="cats">
+      <div class="cat active" onclick="selCat(this)"><div class="cat-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F5F2ED" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><div class="cat-nm">Plomería</div></div>
+      <div class="cat" onclick="selCat(this)"><div class="cat-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D0D0D" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="cat-nm">Eléctrico</div></div>
+      <div class="cat" onclick="selCat(this)"><div class="cat-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D0D0D" stroke-width="2"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg></div><div class="cat-nm">Clima</div></div>
+      <div class="cat" onclick="selCat(this)"><div class="cat-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D0D0D" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 15h6"/></svg></div><div class="cat-nm">Pintura</div></div>
+    </div>
+    <div class="sec-lbl">Técnicos disponibles ahora</div>
+    <div class="tech-list">
+      <div class="tcard"><div class="tav">CM</div><div class="tinf"><div class="tnm">Carlos Meza</div><div class="tsp">PLOMERÍA · TRES RÍOS</div></div><div class="trt"><div class="star-badge">★ 4.9</div><div class="tpr">desde $350</div></div></div>
+      <div class="tcard"><div class="tav">JV</div><div class="tinf"><div class="tnm">Jesús Valenzuela</div><div class="tsp">PLOMERÍA · CENTRO</div></div><div class="trt"><div class="star-badge">★ 4.8</div><div class="tpr">desde $300</div></div></div>
+      <div class="tcard"><div class="tav">RG</div><div class="tinf"><div class="tnm">Ramón García</div><div class="tsp">PLOMERÍA · CHAPULTEPEC</div></div><div class="trt"><div class="star-badge">★ 4.7</div><div class="tpr">desde $280</div></div></div>
+    </div>
+  </div>
+  <div class="bot-nav">
+    <div class="bn active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8531A" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><div class="bn-lbl">Inicio</div><div class="bn-dot"></div></div>
+    <div class="bn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><div class="bn-lbl">Explorar</div></div>
+    <div class="bn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><div class="bn-lbl">Servicios</div></div>
+    <div class="bn" onclick="nav('screen-mi-perfil')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="bn-lbl">Perfil</div></div>
+  </div>
+</div>
+
+<!-- ══ PANEL TÉCNICO ══ -->
+<div class="screen" id="screen-tecnico">
+  <div class="status"><span class="status-time" style="color:#F5F2ED">9:41</span><div class="status-dots"><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div></div></div>
+  <div class="tec-hdr">
+    <div><div class="tec-greeting">Disponible</div><div class="tec-name" id="tec-nombre">Carlos</div></div>
+    <button class="badge-online" onclick="toggleOnline(this)">En línea</button>
+  </div>
+  <div class="tec-stats">
+    <div class="stat-card"><div class="stat-lbl">Hoy</div><div class="stat-val">$0</div><div class="stat-sub">0 servicios</div></div>
+    <div class="stat-card"><div class="stat-lbl">Calificación</div><div class="stat-val">—</div><div class="stat-sub">Sin reseñas aún</div></div>
+  </div>
+  <div class="req-lbl">Solicitudes</div>
+  <div class="req-cards">
+    <div style="text-align:center;padding:32px 20px;">
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.25);">Sin solicitudes por ahora</div>
+      <div style="font-size:13px;color:rgba(245,242,237,.4);margin-top:8px;">Las solicitudes de clientes aparecerán aquí</div>
+    </div>
+  </div>
+  <div class="bot-nav dark">
+    <div class="bn active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8531A" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><div class="bn-lbl">Panel</div><div class="bn-dot"></div></div>
+    <div class="bn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(245,242,237,.3)" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><div class="bn-lbl">Pagos</div></div>
+    <div class="bn" onclick="nav('screen-mi-perfil')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(245,242,237,.3)" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="bn-lbl">Perfil</div></div>
+  </div>
+</div>
+
+<!-- ══ MI PERFIL ══ -->
+<div class="screen" id="screen-mi-perfil">
+  <div class="perfil-user-hero">
+    <div class="status"><span class="status-time" style="color:#F5F2ED">9:41</span><div class="status-dots"><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div></div></div>
+    <div style="padding:8px 24px 0;">
+      <div class="perfil-av-big" id="perfil-av">JL</div>
+      <div class="perfil-user-nm" id="perfil-nombre">Julio Landa</div>
+      <div class="perfil-user-email" id="perfil-email">julio@correo.com</div>
+      <div class="perfil-user-rol"><div class="perfil-user-rol-dot"></div><div class="perfil-user-rol-txt" id="perfil-rol">Propietario</div></div>
+    </div>
+  </div>
+  <div class="perfil-body">
+    <div class="perfil-item"><div><div class="perfil-item-lbl">Nombre</div><div class="perfil-item-val" id="perfil-item-nombre">—</div></div></div>
+    <div class="perfil-item"><div><div class="perfil-item-lbl">Correo</div><div class="perfil-item-val" id="perfil-item-email">—</div></div></div>
+    <div class="perfil-item"><div><div class="perfil-item-lbl">Teléfono</div><div class="perfil-item-val" id="perfil-item-tel">—</div></div></div>
+    <div class="perfil-item"><div><div class="perfil-item-lbl">Rol</div><div class="perfil-item-val" id="perfil-item-rol">—</div></div></div>
+    <button class="logout-btn" onclick="doLogout()">Cerrar sesión</button>
+    <button class="back-btn" style="justify-content:center;margin-top:4px;" onclick="back()">← Volver</button>
+  </div>
+</div>
+
+</div><!-- /app -->
+
+<script>
+// ── SUPABASE ──
+const SUPABASE_URL = 'https://zvheieedjqguvgsucsyh.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_iFWtRQmivexIrWLOm61Oow_tj8jUVFm';
+const { createClient } = supabase;
+const sb = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+// ── STATE ──
+let currentUser = null;
+let currentProfile = null;
+let termsAccepted = false;
+let selectedRole = 'cliente';
+const navHistory = [];
+let current = 'screen-splash';
+
+// ── INIT ──
+async function init() {
+  const { data: { session } } = await sb.auth.getSession();
+  if (session?.user) {
+    currentUser = session.user;
+    await loadProfile(session.user.id);
+    goHome();
+  }
+  document.getElementById('loader').classList.add('hide');
+
+  sb.auth.onAuthStateChange(async (event, session) => {
+    if (event === 'SIGNED_IN' && session?.user) {
+      currentUser = session.user;
+      await loadProfile(session.user.id);
+      goHome();
+    }
+    if (event === 'SIGNED_OUT') {
+      currentUser = null;
+      currentProfile = null;
+      nav('screen-splash');
+    }
+  });
+}
+
+// ── NAVIGATION ──
+function nav(to) {
+  const fromEl = document.getElementById(current);
+  const toEl = document.getElementById(to);
+  if (!toEl || to === current) return;
+  fromEl.classList.remove('active');
+  fromEl.classList.add('back');
+  toEl.classList.remove('back');
+  toEl.classList.add('active');
+  toEl.scrollTop = 0;
+  navHistory.push(current);
+  current = to;
+  setTimeout(() => fromEl.classList.remove('back'), 300);
+}
+
+function back() {
+  if (navHistory.length === 0) return;
+  const prev = navHistory.pop();
+  const fromEl = document.getElementById(current);
+  const toEl = document.getElementById(prev);
+  fromEl.classList.remove('active');
+  toEl.classList.add('active');
+  toEl.scrollTop = 0;
+  current = prev;
+}
+
+// ── TOAST ──
+function toast(msg, type = '') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'show ' + type;
+  setTimeout(() => t.className = '', 3000);
+}
+
+// ── ROLE ──
+function selectRole(role) {
+  document.getElementById('card-cliente').classList.toggle('selected', role === 'cliente');
+  document.getElementById('card-tecnico').classList.toggle('selected', role === 'tecnico');
+  selectedRole = role;
+  const badge = document.getElementById('role-badge');
+  if (badge) badge.textContent = role === 'cliente' ? 'Propietario' : 'Técnico';
+}
+
+function toggleTerms() {
+  termsAccepted = !termsAccepted;
+  const check = document.getElementById('terms-check');
+  check.classList.toggle('checked', termsAccepted);
+}
+
+// ── REGISTER ──
+async function doRegister() {
+  const nombre = document.getElementById('reg-nombre').value.trim();
+  const email = document.getElementById('reg-email').value.trim();
+  const password = document.getElementById('reg-password').value;
+  const telefono = document.getElementById('reg-telefono').value.trim();
+
+  if (!nombre) return toast('Ingresa tu nombre completo', 'error');
+  if (!email) return toast('Ingresa tu correo electrónico', 'error');
+  if (!password || password.length < 6) return toast('La contraseña debe tener mínimo 6 caracteres', 'error');
+  if (!termsAccepted) return toast('Acepta los términos de servicio', 'error');
+
+  const btn = document.getElementById('btn-register');
+  btn.disabled = true;
+  btn.textContent = 'Creando cuenta...';
+
+  const { data, error } = await sb.auth.signUp({
+    email,
+    password,
+    options: { data: { nombre, telefono, rol: selectedRole } }
+  });
+
+  if (error) {
+    btn.disabled = false;
+    btn.textContent = 'Crear cuenta →';
+    if (error.message.includes('already registered')) return toast('Este correo ya está registrado', 'error');
+    return toast(error.message, 'error');
+  }
+
+  if (data.user) {
+    // Guardar perfil en tabla profiles
+    await sb.from('profiles').upsert({
+      id: data.user.id,
+      nombre,
+      telefono: telefono ? '+52' + telefono.replace(/\s/g, '') : null,
+      rol: selectedRole
+    });
+    currentUser = data.user;
+    currentProfile = { nombre, telefono, rol: selectedRole };
+    toast('¡Cuenta creada! Bienvenido a FIXo', 'success');
+    goHome();
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Crear cuenta →';
+}
+
+// ── LOGIN ──
+async function doLogin() {
+  const email = document.getElementById('login-email').value.trim();
+  const password = document.getElementById('login-password').value;
+
+  if (!email) return toast('Ingresa tu correo electrónico', 'error');
+  if (!password) return toast('Ingresa tu contraseña', 'error');
+
+  const btn = document.getElementById('btn-login');
+  btn.disabled = true;
+  btn.textContent = 'Entrando...';
+
+  const { data, error } = await sb.auth.signInWithPassword({ email, password });
+
+  if (error) {
+    btn.disabled = false;
+    btn.textContent = 'Entrar →';
+    if (error.message.includes('Invalid login')) return toast('Correo o contraseña incorrectos', 'error');
+    return toast(error.message, 'error');
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Entrar →';
+}
+
+// ── FORGOT PASSWORD ──
+async function doForgotPassword() {
+  const email = document.getElementById('login-email').value.trim();
+  if (!email) return toast('Ingresa tu correo primero', 'error');
+  const { error } = await sb.auth.resetPasswordForEmail(email, {
+    redirectTo: 'https://julioolands.github.io/fixo-app/'
+  });
+  if (error) return toast(error.message, 'error');
+  toast('Te enviamos un correo para restablecer tu contraseña', 'success');
+}
+
+// ── LOGOUT ──
+async function doLogout() {
+  await sb.auth.signOut();
+  toast('Sesión cerrada', '');
+}
+
+// ── LOAD PROFILE ──
+async function loadProfile(userId) {
+  const { data } = await sb.from('profiles').select('*').eq('id', userId).single();
+  if (data) {
+    currentProfile = data;
+  } else {
+    // Si no hay perfil, usar metadata del usuario
+    const meta = currentUser?.user_metadata || {};
+    currentProfile = {
+      nombre: meta.nombre || currentUser?.email?.split('@')[0] || 'Usuario',
+      telefono: meta.telefono || null,
+      rol: meta.rol || 'cliente'
+    };
+  }
+}
+
+// ── GO HOME (según rol) ──
+function goHome() {
+  const nombre = currentProfile?.nombre || 'Usuario';
+  const rol = currentProfile?.rol || 'cliente';
+  const initials = nombre.split(' ').map(n => n[0]).join('').toUpperCase().slice(0,2);
+
+  if (rol === 'tecnico') {
+    document.getElementById('tec-nombre').textContent = nombre.split(' ')[0];
+    nav('screen-tecnico');
+  } else {
+    document.getElementById('home-nombre').textContent = nombre.split(' ')[0];
+    document.getElementById('home-avatar').textContent = initials;
+    nav('screen-home');
+  }
+
+  // Actualizar pantalla de perfil
+  document.getElementById('perfil-av').textContent = initials;
+  document.getElementById('perfil-nombre').textContent = nombre;
+  document.getElementById('perfil-email').textContent = currentUser?.email || '';
+  document.getElementById('perfil-rol').textContent = rol === 'tecnico' ? 'Técnico' : 'Propietario';
+  document.getElementById('perfil-item-nombre').textContent = nombre;
+  document.getElementById('perfil-item-email').textContent = currentUser?.email || '';
+  document.getElementById('perfil-item-tel').textContent = currentProfile?.telefono || 'No registrado';
+  document.getElementById('perfil-item-rol').textContent = rol === 'tecnico' ? 'Técnico' : 'Propietario';
+}
+
+// ── UI HELPERS ──
+function selCat(el) {
+  document.querySelectorAll('.cat').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function toggleOnline(btn) {
+  const on = btn.textContent.trim() === 'En línea';
+  btn.textContent = on ? 'Descanso' : 'En línea';
+  btn.style.background = on ? 'rgba(245,242,237,.15)' : '#E8531A';
+}
+
+// ── PWA ──
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+
+// ── START ──
+init();
+</script>
+</body>
+</html>#loader.hide{opacity:0;pointer-events:none;}
+.loader-logo{display:flex;align-items:baseline;}
+.loader-logo .fix{font-weight:800;font-size:56px;color:var(--white);letter-spacing:-.03em;}
+.loader-logo .o{font-family:'DM Serif Display',serif;font-style:italic;font-size:56px;color:var(--orange);letter-spacing:-.03em;}
+.loader-spinner{width:24px;height:24px;border:2px solid rgba(245,242,237,.2);border-top-color:var(--orange);border-radius:50%;animation:spin .8s linear infinite;margin-top:24px;}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── STATUS BAR ── */
+.status{display:flex;justify-content:space-between;align-items:center;padding:14px 24px 6px;flex-shrink:0;}
+.status-time{font-weight:700;font-size:13px;}
+.status-dots{display:flex;gap:5px;}
+.status-dot{width:5px;height:5px;border-radius:50%;opacity:.7;}
+
+/* ── BUTTONS ── */
+.btn{width:100%;border:none;border-radius:14px;padding:16px;font-family:'Syne',sans-serif;font-weight:700;font-size:15px;cursor:pointer;text-align:center;transition:opacity .15s;}
+.btn:active{opacity:.8;}
+.btn:disabled{opacity:.5;cursor:not-allowed;}
+.btn-orange{background:var(--orange);color:white;}
+.btn-black{background:var(--black);color:var(--white);}
+.btn-ghost{background:rgba(245,242,237,.08);color:var(--white);border:.5px solid rgba(245,242,237,.2);}
+.btn-outline{background:transparent;color:var(--black);border:.5px solid rgba(13,13,13,.2);}
 .btn-red{background:rgba(226,75,74,.1);color:var(--red);border:.5px solid rgba(226,75,74,.25);}
 
 /* ── FIELDS ── */
