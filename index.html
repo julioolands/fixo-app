@@ -55,6 +55,1059 @@ html,body{width:100%;height:100%;overflow:hidden;background:var(--black);font-fa
 .btn-black{background:var(--black);color:var(--white);}
 .btn-ghost{background:rgba(245,242,237,.08);color:var(--white);border:.5px solid rgba(245,242,237,.2);}
 .btn-outline{background:transparent;color:var(--black);border:.5px solid rgba(13,13,13,.2);}
+.btn-red{background:rgba(226,75,74,.1);color:var(--red);border:.5px solid rgba(226,75,74,.25);}
+
+/* ── FIELDS ── */
+.field-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-bottom:7px;}
+.field-input{width:100%;background:var(--cream);border:.5px solid var(--border);border-radius:12px;padding:13px 16px;font-family:'Syne',sans-serif;font-size:14px;color:var(--black);margin-bottom:16px;outline:none;-webkit-appearance:none;}
+.field-input:focus{border-color:var(--orange);}
+.field-input.error{border-color:var(--red);}
+
+/* ── BACK BTN ── */
+.back-btn{display:flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--mid);cursor:pointer;background:none;border:none;padding:8px 24px 0;}
+
+/* ── SPLASH ── */
+#screen-splash{background:var(--black);}
+.splash-body{flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:32px 28px 48px;}
+.splash-logo{display:flex;align-items:baseline;}
+.splash-logo .fix{font-weight:800;font-size:72px;color:var(--white);letter-spacing:-.03em;}
+.splash-logo .o{font-family:'DM Serif Display',serif;font-style:italic;font-size:72px;color:var(--orange);letter-spacing:-.03em;}
+.splash-tagline{font-family:'DM Serif Display',serif;font-style:italic;font-size:22px;color:rgba(245,242,237,.45);line-height:1.3;margin-top:12px;}
+.splash-cta{display:flex;flex-direction:column;gap:10px;}
+.splash-mono{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.2);text-align:center;margin-top:4px;}
+
+/* ── ROLE ── */
+#screen-role{background:var(--white);}
+.onboard-body{flex:1;padding:12px 24px 36px;display:flex;flex-direction:column;}
+.step-row{display:flex;align-items:center;gap:8px;margin-bottom:24px;}
+.step-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);}
+.step-dots{display:flex;gap:5px;}
+.sdot{height:4px;border-radius:2px;}
+.sdot.active{background:var(--orange);width:28px;}
+.sdot.done{background:var(--black);width:20px;}
+.sdot.todo{background:var(--border);width:20px;}
+.screen-title{font-weight:800;font-size:28px;color:var(--black);letter-spacing:-.02em;line-height:1.15;margin-bottom:8px;}
+.screen-sub{font-size:14px;color:var(--mid);line-height:1.5;margin-bottom:24px;}
+.role-cards{display:flex;flex-direction:column;gap:12px;flex:1;}
+.role-card{border:.5px solid var(--border);border-radius:16px;padding:18px 20px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:all .18s;background:var(--cream);}
+.role-card.selected{border:2px solid var(--orange);background:rgba(232,83,26,.04);}
+.role-icon{width:44px;height:44px;border-radius:12px;background:var(--black);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.role-info{flex:1;}
+.role-name{font-weight:700;font-size:15px;color:var(--black);margin-bottom:3px;}
+.role-desc{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;color:var(--mid);}
+.role-check{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border);flex-shrink:0;transition:all .18s;}
+.role-card.selected .role-check{background:var(--orange);border-color:var(--orange);}
+.btn-wrap{margin-top:24px;}
+
+/* ── LOGIN / REGISTER ── */
+#screen-login,#screen-register,#screen-otp{background:var(--white);}
+.auth-body{flex:1;padding:8px 24px 36px;display:flex;flex-direction:column;}
+.login-logo{display:flex;align-items:baseline;margin-bottom:6px;}
+.login-logo .fix{font-weight:800;font-size:34px;color:var(--black);letter-spacing:-.03em;}
+.login-logo .o{font-family:'DM Serif Display',serif;font-style:italic;font-size:34px;color:var(--orange);letter-spacing:-.03em;}
+.forgot-btn{font-family:'DM Mono',monospace;font-size:10px;color:var(--orange);letter-spacing:.1em;text-align:right;display:block;margin-top:-10px;margin-bottom:24px;background:none;border:none;cursor:pointer;width:100%;}
+.divider{display:flex;align-items:center;gap:12px;margin:16px 0;}
+.divider-line{flex:1;height:.5px;background:var(--border);}
+.divider-text{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);letter-spacing:.1em;}
+.wa-btn{width:100%;background:#25D366;color:white;border:none;border-radius:14px;padding:14px;font-family:'Syne',sans-serif;font-weight:600;font-size:14px;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;}
+.register-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--mid);text-align:center;margin-top:16px;}
+.register-link span{color:var(--orange);cursor:pointer;}
+.reg-badge{display:inline-flex;align-items:center;gap:6px;background:var(--cream);border:.5px solid var(--border);border-radius:20px;padding:6px 12px;margin-bottom:16px;}
+.reg-badge-dot{width:8px;height:8px;border-radius:50%;background:var(--orange);}
+.reg-badge-text{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);}
+.phone-row{display:flex;gap:8px;margin-bottom:16px;}
+.phone-prefix{background:var(--cream);border:.5px solid var(--border);border-radius:12px;padding:13px 14px;font-size:14px;color:var(--mid);white-space:nowrap;}
+.phone-input{flex:1;background:var(--cream);border:.5px solid var(--orange);border-radius:12px;padding:13px 16px;font-family:'Syne',sans-serif;font-size:14px;color:var(--black);outline:none;}
+.terms-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;}
+.terms-check{width:18px;height:18px;border-radius:5px;border:1.5px solid var(--orange);background:rgba(232,83,26,.1);flex-shrink:0;margin-top:1px;cursor:pointer;}
+.terms-check.checked{background:var(--orange);}
+.terms-text{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);line-height:1.6;letter-spacing:.04em;}
+.terms-text span{color:var(--orange);}
+
+/* ── OTP ── */
+.otp-info{background:var(--cream);border-radius:14px;padding:16px 18px;margin-bottom:24px;}
+.otp-info-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-bottom:4px;}
+.otp-info-val{font-weight:600;font-size:15px;color:var(--black);}
+.otp-inputs{display:flex;gap:10px;justify-content:center;margin-bottom:24px;}
+.otp-digit{width:48px;height:56px;border-radius:12px;border:.5px solid var(--border);background:var(--cream);font-family:'Syne',sans-serif;font-weight:700;font-size:24px;color:var(--black);text-align:center;outline:none;-webkit-appearance:none;}
+.otp-digit:focus{border-color:var(--orange);}
+.otp-resend{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);text-align:center;margin-top:12px;letter-spacing:.08em;}
+.otp-resend span{color:var(--orange);cursor:pointer;}
+
+/* ── HOME CLIENTE ── */
+#screen-home{background:var(--cream);}
+.home-header{background:var(--black);flex-shrink:0;}
+.hdr-inner{padding:4px 24px 24px;}
+.hdr-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.hdr-greeting{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.4);}
+.hdr-name{font-weight:800;font-size:22px;color:var(--white);letter-spacing:-.02em;margin-top:2px;}
+.avatar{width:38px;height:38px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:white;cursor:pointer;}
+.search-bar{background:rgba(245,242,237,.08);border:.5px solid rgba(245,242,237,.12);border-radius:12px;padding:11px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;}
+.search-txt{font-size:13px;color:rgba(245,242,237,.35);}
+.home-body{flex:1;padding:20px 20px 90px;}
+.sec-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-bottom:12px;}
+.promo{background:var(--orange);border-radius:16px;padding:18px 20px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;}
+.promo-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:4px;}
+.promo-title{font-weight:800;font-size:15px;color:white;line-height:1.2;}
+.promo-sub{font-size:12px;color:rgba(255,255,255,.65);margin-top:3px;}
+.promo-icon{width:48px;height:48px;background:rgba(255,255,255,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px;}
+.cat{background:var(--white);border-radius:12px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;border:.5px solid var(--border);transition:all .18s;}
+.cat.active{background:var(--black);border-color:var(--black);}
+.cat-ic{width:28px;height:28px;border-radius:8px;background:rgba(13,13,13,.06);display:flex;align-items:center;justify-content:center;}
+.cat.active .cat-ic{background:rgba(245,242,237,.12);}
+.cat-nm{font-weight:600;font-size:10px;color:var(--black);text-align:center;line-height:1.2;}
+.cat.active .cat-nm{color:var(--white);}
+.tech-list{display:flex;flex-direction:column;gap:10px;}
+.tcard{background:var(--white);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:12px;border:.5px solid var(--border);cursor:pointer;}
+.tav{width:44px;height:44px;border-radius:12px;background:var(--black);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:var(--white);flex-shrink:0;}
+.tinf{flex:1;}
+.tnm{font-weight:700;font-size:13px;color:var(--black);}
+.tsp{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);margin-top:2px;letter-spacing:.04em;}
+.trt{display:flex;flex-direction:column;align-items:flex-end;gap:4px;}
+.star-badge{background:var(--black);color:var(--white);font-family:'DM Mono',monospace;font-size:10px;padding:4px 8px;border-radius:20px;}
+.tpr{font-weight:600;font-size:11px;color:var(--mid);}
+
+/* ── BOTTOM NAV ── */
+.bot-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:var(--white);border-top:.5px solid var(--border);padding:10px 0 24px;display:flex;justify-content:space-around;z-index:100;}
+.bn{display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;padding:2px 16px;}
+.bn-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);}
+.bn.active .bn-lbl{color:var(--orange);}
+.bn-dot{width:4px;height:4px;border-radius:50%;background:var(--orange);}
+.bot-nav.dark{background:rgba(13,13,13,.95);border-top:.5px solid rgba(245,242,237,.08);}
+.bot-nav.dark .bn-lbl{color:rgba(245,242,237,.3);}
+.bot-nav.dark .bn.active .bn-lbl{color:var(--orange);}
+
+/* ── PANEL TÉCNICO ── */
+#screen-tecnico{background:var(--black);}
+.tec-hdr{display:flex;justify-content:space-between;align-items:center;padding:12px 24px 20px;}
+.tec-greeting{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.4);}
+.tec-name{font-weight:800;font-size:20px;color:var(--white);letter-spacing:-.02em;margin-top:2px;}
+.badge-online{background:var(--orange);color:white;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:20px;border:none;cursor:pointer;}
+.tec-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 20px;margin-bottom:20px;}
+.stat-card{background:rgba(245,242,237,.06);border:.5px solid rgba(245,242,237,.1);border-radius:14px;padding:14px 16px;}
+.stat-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,242,237,.35);margin-bottom:6px;}
+.stat-val{font-weight:800;font-size:22px;color:var(--white);letter-spacing:-.02em;}
+.stat-sub{font-family:'DM Mono',monospace;font-size:9px;color:var(--orange);margin-top:2px;}
+.req-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,242,237,.35);padding:0 20px;margin-bottom:12px;}
+.req-cards{display:flex;flex-direction:column;gap:10px;padding:0 20px 100px;}
+.req-card{background:rgba(245,242,237,.06);border:.5px solid rgba(245,242,237,.1);border-radius:14px;padding:14px 16px;}
+.req-card.new{border-color:var(--orange);background:rgba(232,83,26,.08);}
+.req-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.req-nm{font-weight:700;font-size:13px;color:var(--white);}
+.req-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:10px;}
+.tag-new{background:rgba(232,83,26,.2);color:var(--orange);}
+.tag-prog{background:rgba(29,158,117,.15);color:var(--green);}
+.tag-done{background:rgba(245,242,237,.1);color:rgba(245,242,237,.4);}
+.req-svc{font-family:'DM Mono',monospace;font-size:10px;color:rgba(245,242,237,.4);letter-spacing:.06em;margin-bottom:8px;}
+.req-bot{display:flex;justify-content:space-between;align-items:center;}
+.req-addr{font-size:11px;color:rgba(245,242,237,.5);}
+.req-price{font-weight:700;font-size:13px;color:var(--white);}
+.req-btns{display:flex;gap:6px;margin-top:10px;}
+.rbtn-acc{flex:1;background:var(--orange);color:white;border:none;border-radius:10px;padding:9px;font-weight:700;font-size:12px;cursor:pointer;text-align:center;}
+.rbtn-dec{flex:1;background:rgba(245,242,237,.08);color:rgba(245,242,237,.5);border:.5px solid rgba(245,242,237,.12);border-radius:10px;padding:9px;font-weight:600;font-size:12px;cursor:pointer;text-align:center;}
+
+/* ── MIS SERVICIOS ── */
+#screen-mis-servicios{background:var(--white);}
+.msvc-card{background:var(--cream);border-radius:14px;padding:14px 16px;margin-bottom:10px;border:.5px solid var(--border);}
+.msvc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
+.msvc-nm{font-weight:700;font-size:13px;color:var(--black);}
+.msvc-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:10px;}
+.tag-nueva{background:rgba(232,83,26,.1);color:var(--orange);}
+.tag-completada{background:rgba(29,158,117,.12);color:var(--green);}
+.tag-cancelada{background:rgba(13,13,13,.08);color:var(--mid);}
+.msvc-det{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);margin-top:4px;letter-spacing:.04em;}
+
+/* ── ADMIN ── */
+#screen-admin{background:var(--white);}
+.adm-hero{background:var(--black);padding:20px 24px 24px;flex-shrink:0;}
+.adm-title{font-weight:800;font-size:22px;color:var(--white);letter-spacing:-.02em;margin-bottom:3px;}
+.adm-sub{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.35);}
+.adm-body{flex:1;padding:18px 18px 90px;}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px;}
+.metric{background:var(--cream);border-radius:13px;padding:15px;}
+.metric.accent{background:var(--orange);}
+.metric-val{font-weight:800;font-size:30px;color:var(--black);letter-spacing:-.03em;line-height:1;}
+.metric.accent .metric-val{color:white;}
+.metric-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-top:4px;}
+.metric.accent .metric-lbl{color:rgba(255,255,255,.6);}
+.adm-sec{margin-bottom:22px;}
+.adm-sec-title{font-weight:700;font-size:15px;color:var(--black);margin-bottom:11px;letter-spacing:-.01em;}
+.u-row{background:var(--cream);border-radius:12px;padding:11px 13px;margin-bottom:7px;display:flex;align-items:center;gap:11px;}
+.u-av{width:34px;height:34px;border-radius:9px;background:var(--black);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11px;color:var(--white);flex-shrink:0;}
+.u-av.tc{background:var(--orange);}
+.u-av.ad{background:var(--green);}
+.u-inf{flex:1;}
+.u-nm{font-weight:600;font-size:13px;color:var(--black);}
+.u-em{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);margin-top:1px;}
+.u-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:10px;}
+.u-tag.cl{background:rgba(13,13,13,.08);color:var(--mid);}
+.u-tag.tc{background:rgba(232,83,26,.1);color:var(--orange);}
+.u-tag.ad{background:rgba(29,158,117,.12);color:var(--green);}
+.sv-row{background:var(--cream);border-radius:12px;padding:11px 13px;margin-bottom:7px;}
+.sv-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
+.sv-nm{font-weight:600;font-size:13px;color:var(--black);}
+.sv-det{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);}
+.adm-empty{font-family:'DM Mono',monospace;font-size:11px;color:var(--mid);text-align:center;padding:28px;letter-spacing:.1em;}
+.adm-bot{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:var(--white);border-top:.5px solid var(--border);padding:10px 18px 22px;z-index:100;}
+
+/* ── SOLICITUD FLUJO ── */
+#screen-svc,#screen-tech,#screen-confirm,#screen-sent{background:var(--white);}
+.steps-bar{display:flex;align-items:center;padding:8px 24px 14px;}
+.step-it{display:flex;align-items:center;gap:5px;flex:1;}
+.step-ci{width:23px;height:23px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:10px;flex-shrink:0;}
+.step-ci.act{background:var(--orange);color:white;}
+.step-ci.done{background:var(--black);color:var(--white);}
+.step-ci.todo{background:rgba(13,13,13,.08);color:var(--mid);}
+.step-line{flex:1;height:1px;margin:0 4px;}
+.step-line.done{background:var(--black);}
+.step-line.todo{background:rgba(13,13,13,.12);}
+.step-tx{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;}
+.step-tx.act,.step-tx.done{color:var(--black);}
+.step-tx.todo{color:var(--mid);}
+.sol-body{flex:1;padding:0 22px 90px;display:flex;flex-direction:column;}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px;}
+.svc-card{background:var(--cream);border:.5px solid var(--border);border-radius:13px;padding:13px 11px;display:flex;flex-direction:column;gap:7px;cursor:pointer;transition:all .18s;}
+.svc-card.sel{border:2px solid var(--orange);background:rgba(232,83,26,.04);}
+.svc-ic{width:30px;height:30px;border-radius:9px;background:rgba(13,13,13,.06);display:flex;align-items:center;justify-content:center;}
+.svc-card.sel .svc-ic{background:rgba(232,83,26,.12);}
+.svc-nm{font-weight:700;font-size:12px;color:var(--black);line-height:1.2;}
+.svc-pr{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);}
+.desc-ta{width:100%;background:var(--cream);border:.5px solid var(--border);border-radius:13px;padding:13px 15px;font-family:'Syne',sans-serif;font-size:13px;color:var(--black);min-height:70px;margin-bottom:15px;outline:none;resize:none;}
+.urg-row{display:flex;gap:8px;margin-bottom:22px;}
+.urg-btn{flex:1;padding:10px 7px;border-radius:12px;border:.5px solid var(--border);background:var(--cream);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);cursor:pointer;text-align:center;transition:all .18s;}
+.urg-btn.sel{background:var(--orange);color:white;border-color:var(--orange);}
+.tech-cards{display:flex;flex-direction:column;gap:9px;margin-bottom:22px;}
+.tech-card{background:var(--cream);border:.5px solid var(--border);border-radius:13px;padding:12px 13px;display:flex;align-items:center;gap:11px;cursor:pointer;transition:all .18s;}
+.tech-card.sel{border:2px solid var(--orange);}
+.tech-av{width:38px;height:38px;border-radius:10px;background:var(--black);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:var(--white);flex-shrink:0;}
+.tech-inf{flex:1;}
+.tech-nm{font-weight:700;font-size:13px;color:var(--black);}
+.tech-sp{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);margin-top:1px;}
+.tech-eta{font-family:'DM Mono',monospace;font-size:9px;color:var(--orange);margin-top:1px;}
+.tech-rt{display:flex;flex-direction:column;align-items:flex-end;gap:3px;}
+.tech-star{background:var(--black);color:var(--white);font-family:'DM Mono',monospace;font-size:10px;padding:3px 7px;border-radius:20px;}
+.tech-prc{font-weight:600;font-size:11px;color:var(--mid);}
+.conf-card{background:var(--cream);border:.5px solid var(--border);border-radius:15px;padding:17px;margin-bottom:13px;}
+.conf-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:.5px solid rgba(13,13,13,.07);}
+.conf-row:last-child{border-bottom:none;}
+.conf-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);}
+.conf-val{font-weight:600;font-size:13px;color:var(--black);}
+.conf-val.or{color:var(--orange);}
+.price-box{background:var(--black);border-radius:13px;padding:15px 17px;margin-bottom:13px;}
+.price-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.4);margin-bottom:3px;}
+.price-val{font-weight:800;font-size:22px;color:var(--white);letter-spacing:-.02em;}
+.price-note{font-family:'DM Mono',monospace;font-size:9px;color:rgba(245,242,237,.3);margin-top:3px;}
+.map-box{background:#DDD9D0;border-radius:13px;height:88px;margin-bottom:9px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.map-addr{font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);margin-bottom:15px;letter-spacing:.08em;}
+.sent-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px 22px;text-align:center;gap:14px;}
+.sent-icon{width:68px;height:68px;border-radius:50%;background:var(--black);display:flex;align-items:center;justify-content:center;}
+
+/* ── PERFIL USUARIO ── */
+#screen-mi-perfil{background:var(--white);}
+.perfil-user-hero{background:var(--black);padding:20px 24px 28px;flex-shrink:0;}
+.perfil-av-big{width:72px;height:72px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:28px;color:white;margin-bottom:12px;}
+.perfil-user-nm{font-weight:800;font-size:22px;color:var(--white);letter-spacing:-.02em;}
+.perfil-user-email{font-family:'DM Mono',monospace;font-size:11px;color:rgba(245,242,237,.4);margin-top:4px;}
+.perfil-user-rol{display:inline-flex;align-items:center;gap:6px;background:rgba(232,83,26,.15);border:.5px solid rgba(232,83,26,.3);border-radius:20px;padding:5px 12px;margin-top:10px;}
+.perfil-user-rol-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);}
+.perfil-user-rol-txt{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);}
+.perfil-body{flex:1;padding:24px;display:flex;flex-direction:column;gap:12px;}
+.perfil-item{background:var(--cream);border-radius:14px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+.perfil-item-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-bottom:3px;}
+.perfil-item-val{font-weight:600;font-size:14px;color:var(--black);}
+.logout-btn{width:100%;background:rgba(226,75,74,.1);color:var(--red);border:.5px solid rgba(226,75,74,.3);border-radius:14px;padding:15px;font-family:'Syne',sans-serif;font-weight:700;font-size:15px;cursor:pointer;text-align:center;margin-top:8px;}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+    <div class="loader-logo"><span class="fix">FIX</span><span class="o">o</span></div>
+    <div class="loader-spinner"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<div id="app">
+
+<!-- ══ SPLASH ══ -->
+<div class="screen" id="screen-splash">
+  <div class="status"><span class="status-time" style="color:#F5F2ED">9:41</span><div class="status-dots"><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div></div></div>
+  <div class="splash-body">
+    <div>
+      <div class="splash-logo"><span class="fix">FIX</span><span class="o">o</span></div>
+      <div class="splash-tagline">Tu casa siempre<br>en buenas manos.</div>
+    </div>
+    <div class="splash-cta">
+      <button class="btn btn-orange" onclick="nav('screen-role')">Comenzar →</button>
+      <button class="btn btn-ghost" onclick="nav('screen-login')">Ya tengo cuenta</button>
+      <div class="splash-mono">Culiacán, Sinaloa · 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SELECCIÓN DE ROL ══ -->
+<div class="screen" id="screen-role">
+  <div class="status"><span class="status-time" style="color:var(--black)">9:41</span><div class="status-dots"><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div></div></div>
+  <div class="onboard-body">
+    <div class="step-row"><span class="step-lbl">Paso 1 de 2</span><div class="step-dots"><div class="sdot active"></div><div class="sdot todo"></div></div></div>
+    <div class="screen-title">¿Cómo vas<br>a usar FIXo?</div>
+    <div class="screen-sub">Elige tu perfil para personalizar tu experiencia.</div>
+    <div class="role-cards">
+      <div class="role-card selected" id="card-cliente" onclick="selectRole('cliente')">
+        <div class="role-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5F2ED" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="role-info"><div class="role-name">Soy propietario</div><div class="role-desc">Necesito servicios para mi hogar</div></div>
+        <div class="role-check" id="check-cliente"></div>
+      </div>
+      <div class="role-card" id="card-tecnico" onclick="selectRole('tecnico')">
+        <div class="role-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5F2ED" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="role-info"><div class="role-name">Soy técnico</div><div class="role-desc">Ofrezco servicios profesionales</div></div>
+        <div class="role-check" id="check-tecnico"></div>
+      </div>
+    </div>
+    <div class="btn-wrap"><button class="btn btn-orange" onclick="nav('screen-register')">Continuar →</button></div>
+  </div>
+</div>
+
+<!-- ══ REGISTRO ══ -->
+<div class="screen" id="screen-register">
+  <div class="status"><span class="status-time" style="color:var(--black)">9:41</span><div class="status-dots"><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div></div></div>
+  <div class="auth-body">
+    <button class="back-btn" onclick="back()">← Atrás</button>
+    <div style="height:12px"></div>
+    <div class="step-row"><span class="step-lbl">Paso 2 de 2</span><div class="step-dots"><div class="sdot done"></div><div class="sdot active"></div></div></div>
+    <div class="reg-badge"><div class="reg-badge-dot"></div><div class="reg-badge-text" id="role-badge">Propietario</div></div>
+    <div class="screen-title" style="font-size:26px;margin-bottom:20px;">Crea tu<br>cuenta.</div>
+    <div class="field-label">Nombre completo</div>
+    <input class="field-input" id="reg-nombre" type="text" placeholder="Julio Landa" autocomplete="name">
+    <div class="field-label">Correo electrónico</div>
+    <input class="field-input" id="reg-email" type="email" placeholder="julio@correo.com" autocomplete="email">
+    <div class="field-label">Contraseña</div>
+    <input class="field-input" id="reg-password" type="password" placeholder="Mínimo 6 caracteres" autocomplete="new-password">
+    <div class="field-label">Teléfono (opcional)</div>
+    <div class="phone-row"><div class="phone-prefix">+52</div><input class="phone-input" id="reg-telefono" type="tel" placeholder="667 000 0000" autocomplete="tel"></div>
+    <div class="terms-row"><div class="terms-check" id="terms-check" onclick="toggleTerms()"></div><div class="terms-text">Acepto los <span>Términos de servicio</span> y el <span>Aviso de privacidad</span> de FIXo.</div></div>
+    <button class="btn btn-orange" id="btn-register" onclick="doRegister()">Crear cuenta →</button>
+    <div class="register-link" style="margin-top:16px;">¿Ya tienes cuenta? <span onclick="nav('screen-login')">Inicia sesión</span></div>
+  </div>
+</div>
+
+<!-- ══ LOGIN ══ -->
+<div class="screen" id="screen-login">
+  <div class="status"><span class="status-time" style="color:var(--black)">9:41</span><div class="status-dots"><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div></div></div>
+  <div class="auth-body">
+    <button class="back-btn" onclick="nav('screen-splash')">← Volver</button>
+    <div style="height:16px"></div>
+    <div class="login-logo"><span class="fix">FIX</span><span class="o">o</span></div>
+    <div class="screen-title" style="font-size:24px;margin-bottom:6px;">Bienvenido<br>de regreso.</div>
+    <div class="screen-sub" style="margin-bottom:24px;">Ingresa para ver tus servicios y técnicos disponibles.</div>
+    <div class="field-label">Correo electrónico</div>
+    <input class="field-input" id="login-email" type="email" placeholder="julio@correo.com" autocomplete="email">
+    <div class="field-label">Contraseña</div>
+    <input class="field-input" id="login-password" type="password" placeholder="••••••••" autocomplete="current-password">
+    <button class="forgot-btn" onclick="doForgotPassword()">¿Olvidaste tu contraseña?</button>
+    <button class="btn btn-black" id="btn-login" onclick="doLogin()">Entrar →</button>
+    <div class="register-link">¿No tienes cuenta? <span onclick="nav('screen-role')">Regístrate</span></div>
+  </div>
+</div>
+
+<!-- ══ HOME CLIENTE ══ -->
+<div class="screen" id="screen-home">
+  <div class="home-header">
+    <div class="status"><span class="status-time" style="color:#F5F2ED">9:41</span><div class="status-dots"><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div></div></div>
+    <div class="hdr-inner">
+      <div class="hdr-top">
+        <div><div class="hdr-greeting">Hola de nuevo</div><div class="hdr-name" id="home-nombre">Julio</div></div>
+        <div class="avatar" id="home-avatar" onclick="nav('screen-mi-perfil')">JL</div>
+      </div>
+      <div class="search-bar"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(245,242,237,.35)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><div class="search-txt">¿Qué necesita tu casa hoy?</div></div>
+    </div>
+  </div>
+  <div class="home-body">
+    <div class="promo"><div><div class="promo-tag">Temporada de calor</div><div class="promo-title">Revisión de A/C<br>con descuento</div><div class="promo-sub">Técnicos disponibles hoy</div></div><div class="promo-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg></div></div>
+    <div class="sec-lbl">Servicios</div>
+    <div class="cats">
+      <div class="cat active" onclick="selCat(this)"><div class="cat-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F5F2ED" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><div class="cat-nm">Plomería</div></div>
+      <div class="cat" onclick="selCat(this)"><div class="cat-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D0D0D" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="cat-nm">Eléctrico</div></div>
+      <div class="cat" onclick="selCat(this)"><div class="cat-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D0D0D" stroke-width="2"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg></div><div class="cat-nm">Clima</div></div>
+      <div class="cat" onclick="selCat(this)"><div class="cat-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D0D0D" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 15h6"/></svg></div><div class="cat-nm">Pintura</div></div>
+    </div>
+    <div class="sec-lbl">Técnicos disponibles ahora</div>
+    <div class="tech-list">
+      <div class="tcard"><div class="tav">CM</div><div class="tinf"><div class="tnm">Carlos Meza</div><div class="tsp">PLOMERÍA · TRES RÍOS</div></div><div class="trt"><div class="star-badge">★ 4.9</div><div class="tpr">desde $350</div></div></div>
+      <div class="tcard"><div class="tav">JV</div><div class="tinf"><div class="tnm">Jesús Valenzuela</div><div class="tsp">PLOMERÍA · CENTRO</div></div><div class="trt"><div class="star-badge">★ 4.8</div><div class="tpr">desde $300</div></div></div>
+      <div class="tcard"><div class="tav">RG</div><div class="tinf"><div class="tnm">Ramón García</div><div class="tsp">PLOMERÍA · CHAPULTEPEC</div></div><div class="trt"><div class="star-badge">★ 4.7</div><div class="tpr">desde $280</div></div></div>
+    </div>
+  </div>
+  <div class="bot-nav">
+    <div class="bn active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8531A" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><div class="bn-lbl">Inicio</div><div class="bn-dot"></div></div>
+    <div class="bn" onclick="nav('screen-mis-servicios')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><div class="bn-lbl">Servicios</div></div>
+    <div class="bn" onclick="nav('screen-svc')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><div class="bn-lbl">Solicitar</div></div>
+    <div class="bn" onclick="nav('screen-mi-perfil')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="bn-lbl">Perfil</div></div>
+  </div>
+</div>
+
+<!-- ══ PANEL TÉCNICO ══ -->
+<div class="screen" id="screen-tecnico">
+  <div class="status"><span class="status-time" style="color:#F5F2ED">9:41</span><div class="status-dots"><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div></div></div>
+  <div class="tec-hdr">
+    <div><div class="tec-greeting">Disponible</div><div class="tec-name" id="tec-nombre">Carlos</div></div>
+    <button class="badge-online" onclick="toggleOnline(this)">En línea</button>
+  </div>
+  <div class="tec-stats">
+    <div class="stat-card"><div class="stat-lbl">Hoy</div><div class="stat-val">$0</div><div class="stat-sub">0 servicios</div></div>
+    <div class="stat-card"><div class="stat-lbl">Calificación</div><div class="stat-val">—</div><div class="stat-sub">Sin reseñas aún</div></div>
+  </div>
+  <div class="req-lbl">Solicitudes</div>
+  <div class="req-cards">
+    <div style="text-align:center;padding:32px 20px;">
+      <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,242,237,.25);">Sin solicitudes por ahora</div>
+      <div style="font-size:13px;color:rgba(245,242,237,.4);margin-top:8px;">Las solicitudes de clientes aparecerán aquí</div>
+    </div>
+  </div>
+  <div class="bot-nav dark">
+    <div class="bn active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8531A" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><div class="bn-lbl">Panel</div><div class="bn-dot"></div></div>
+    <div class="bn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(245,242,237,.3)" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><div class="bn-lbl">Pagos</div></div>
+    <div class="bn" onclick="nav('screen-mi-perfil')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(245,242,237,.3)" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="bn-lbl">Perfil</div></div>
+  </div>
+</div>
+
+<!-- ══ MI PERFIL ══ -->
+<div class="screen" id="screen-mi-perfil">
+  <div class="perfil-user-hero">
+    <div class="status"><span class="status-time" style="color:#F5F2ED">9:41</span><div class="status-dots"><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div></div></div>
+    <div style="padding:8px 24px 0;">
+      <div class="perfil-av-big" id="perfil-av">JL</div>
+      <div class="perfil-user-nm" id="perfil-nombre">Julio Landa</div>
+      <div class="perfil-user-email" id="perfil-email">julio@correo.com</div>
+      <div class="perfil-user-rol"><div class="perfil-user-rol-dot"></div><div class="perfil-user-rol-txt" id="perfil-rol">Propietario</div></div>
+    </div>
+  </div>
+  <div class="perfil-body">
+    <div class="perfil-item"><div><div class="perfil-item-lbl">Nombre</div><div class="perfil-item-val" id="perfil-item-nombre">—</div></div></div>
+    <div class="perfil-item"><div><div class="perfil-item-lbl">Correo</div><div class="perfil-item-val" id="perfil-item-email">—</div></div></div>
+    <div class="perfil-item"><div><div class="perfil-item-lbl">Teléfono</div><div class="perfil-item-val" id="perfil-item-tel">—</div></div></div>
+    <div class="perfil-item"><div><div class="perfil-item-lbl">Rol</div><div class="perfil-item-val" id="perfil-item-rol">—</div></div></div>
+    <button class="logout-btn" onclick="doLogout()">Cerrar sesión</button>
+    <button class="back-btn" style="justify-content:center;margin-top:4px;" onclick="back()">← Volver</button>
+  </div>
+</div>
+
+<!-- ══ MIS SERVICIOS ══ -->
+<div class="screen" id="screen-mis-servicios">
+  <div class="status"><span class="status-time" style="color:var(--black)">9:41</span><div class="status-dots"><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div></div></div>
+  <div style="padding:16px 24px 8px;flex-shrink:0;"><div style="font-weight:800;font-size:22px;color:var(--black);letter-spacing:-.02em;">Mis servicios</div></div>
+  <div style="flex:1;padding:14px 18px 88px;" id="mis-svc-list"><div style="text-align:center;padding:36px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);">Cargando...</div></div>
+  <div class="bot-nav" style="background:var(--white);border-top:.5px solid var(--border);">
+    <div class="bn" onclick="nav('screen-home')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><div class="bn-lbl">Inicio</div></div>
+    <div class="bn active"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E8531A" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><div class="bn-lbl">Servicios</div><div class="bn-dot"></div></div>
+    <div class="bn" onclick="nav('screen-svc')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><div class="bn-lbl">Solicitar</div></div>
+    <div class="bn" onclick="nav('screen-mi-perfil')"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="bn-lbl">Perfil</div></div>
+  </div>
+</div>
+
+<!-- ══ SOLICITUD - SERVICIO ══ -->
+<div class="screen" id="screen-svc">
+  <div class="status"><span class="status-time" style="color:var(--black)">9:41</span><div class="status-dots"><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div></div></div>
+  <button class="back-btn" onclick="back()">← Inicio</button>
+  <div class="steps-bar">
+    <div class="step-it"><div class="step-ci act">1</div><div class="step-tx act">Servicio</div></div>
+    <div class="step-line todo"></div>
+    <div class="step-it"><div class="step-ci todo">2</div><div class="step-tx todo">Técnico</div></div>
+    <div class="step-line todo"></div>
+    <div class="step-it"><div class="step-ci todo">3</div><div class="step-tx todo">Confirmar</div></div>
+  </div>
+  <div class="sol-body">
+    <div style="font-weight:800;font-size:25px;color:var(--black);letter-spacing:-.02em;line-height:1.15;margin-bottom:6px;">¿Qué necesita<br>tu casa?</div>
+    <div style="font-size:13px;color:var(--mid);line-height:1.5;margin-bottom:18px;">Elige el servicio y cuéntanos el problema.</div>
+    <div class="field-label">Categoría</div>
+    <div class="svc-grid">
+      <div class="svc-card sel" onclick="selSvcCard(this,'Plomería','$300–$600')"><div class="svc-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#E8531A" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div><div class="svc-nm">Plomería</div><div class="svc-pr">desde $300</div></div>
+      <div class="svc-card" onclick="selSvcCard(this,'Eléctrico','$350–$700')"><div class="svc-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="svc-nm">Eléctrico</div><div class="svc-pr">desde $350</div></div>
+      <div class="svc-card" onclick="selSvcCard(this,'Clima / A/C','$400–$800')"><div class="svc-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="2"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg></div><div class="svc-nm">Clima / A/C</div><div class="svc-pr">desde $400</div></div>
+      <div class="svc-card" onclick="selSvcCard(this,'Pintura','$500–$1000')"><div class="svc-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6B6560" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 15h6"/></svg></div><div class="svc-nm">Pintura</div><div class="svc-pr">desde $500</div></div>
+    </div>
+    <div class="field-label">Describe el problema</div>
+    <textarea class="desc-ta" id="svc-desc" placeholder="Ej: Hay una fuga debajo del lavabo del baño principal..."></textarea>
+    <div class="field-label">Urgencia</div>
+    <div class="urg-row">
+      <div class="urg-btn sel" onclick="selUrg(this)">Hoy</div>
+      <div class="urg-btn" onclick="selUrg(this)">Esta semana</div>
+      <div class="urg-btn" onclick="selUrg(this)">Sin prisa</div>
+    </div>
+    <button class="btn btn-orange" onclick="nav('screen-tech')">Ver técnicos disponibles →</button>
+  </div>
+</div>
+
+<!-- ══ SOLICITUD - TÉCNICO ══ -->
+<div class="screen" id="screen-tech">
+  <div class="status"><span class="status-time" style="color:var(--black)">9:41</span><div class="status-dots"><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div></div></div>
+  <button class="back-btn" onclick="back()">← Atrás</button>
+  <div class="steps-bar">
+    <div class="step-it"><div class="step-ci done">✓</div><div class="step-tx done">Servicio</div></div>
+    <div class="step-line done"></div>
+    <div class="step-it"><div class="step-ci act">2</div><div class="step-tx act">Técnico</div></div>
+    <div class="step-line todo"></div>
+    <div class="step-it"><div class="step-ci todo">3</div><div class="step-tx todo">Confirmar</div></div>
+  </div>
+  <div class="sol-body">
+    <div style="font-weight:800;font-size:25px;color:var(--black);letter-spacing:-.02em;line-height:1.15;margin-bottom:6px;">Técnicos<br>disponibles hoy</div>
+    <div style="font-size:13px;color:var(--mid);line-height:1.5;margin-bottom:18px;">3 técnicos cerca de Tres Ríos.</div>
+    <div class="tech-cards">
+      <div class="tech-card sel" onclick="selTech(this,'Carlos Meza','18')"><div class="tech-av">CM</div><div class="tech-inf"><div class="tech-nm">Carlos Meza</div><div class="tech-sp">PLOMERÍA · 1.2 KM</div><div class="tech-eta">Llega en ~18 min</div></div><div class="tech-rt"><div class="tech-star">★ 4.9</div><div class="tech-prc">desde $350</div></div></div>
+      <div class="tech-card" onclick="selTech(this,'Jesús Valenzuela','30')"><div class="tech-av">JV</div><div class="tech-inf"><div class="tech-nm">Jesús Valenzuela</div><div class="tech-sp">PLOMERÍA · 2.8 KM</div><div class="tech-eta">Llega en ~30 min</div></div><div class="tech-rt"><div class="tech-star">★ 4.8</div><div class="tech-prc">desde $300</div></div></div>
+      <div class="tech-card" onclick="selTech(this,'Ramón García','42')"><div class="tech-av">RG</div><div class="tech-inf"><div class="tech-nm">Ramón García</div><div class="tech-sp">PLOMERÍA · 4.1 KM</div><div class="tech-eta">Llega en ~42 min</div></div><div class="tech-rt"><div class="tech-star">★ 4.7</div><div class="tech-prc">desde $280</div></div></div>
+    </div>
+    <button class="btn btn-orange" id="btn-tech" onclick="nav('screen-confirm')">Continuar con Carlos Meza →</button>
+  </div>
+</div>
+
+<!-- ══ SOLICITUD - CONFIRMAR ══ -->
+<div class="screen" id="screen-confirm">
+  <div class="status"><span class="status-time" style="color:var(--black)">9:41</span><div class="status-dots"><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div></div></div>
+  <button class="back-btn" onclick="back()">← Atrás</button>
+  <div class="steps-bar">
+    <div class="step-it"><div class="step-ci done">✓</div><div class="step-tx done">Servicio</div></div>
+    <div class="step-line done"></div>
+    <div class="step-it"><div class="step-ci done">✓</div><div class="step-tx done">Técnico</div></div>
+    <div class="step-line done"></div>
+    <div class="step-it"><div class="step-ci act">3</div><div class="step-tx act">Confirmar</div></div>
+  </div>
+  <div class="sol-body">
+    <div style="font-weight:800;font-size:25px;color:var(--black);letter-spacing:-.02em;line-height:1.15;margin-bottom:16px;">Resumen<br>de solicitud</div>
+    <div class="conf-card">
+      <div class="conf-row"><div class="conf-lbl">Servicio</div><div class="conf-val" id="conf-svc">Plomería</div></div>
+      <div class="conf-row"><div class="conf-lbl">Técnico</div><div class="conf-val" id="conf-tech">Carlos Meza ★ 4.9</div></div>
+      <div class="conf-row"><div class="conf-lbl">Urgencia</div><div class="conf-val or" id="conf-urg">Hoy</div></div>
+      <div class="conf-row"><div class="conf-lbl">Llegada est.</div><div class="conf-val" id="conf-eta">~18 minutos</div></div>
+      <div class="conf-row"><div class="conf-lbl">Dirección</div><div class="conf-val">Col. Tres Ríos, Culiacán</div></div>
+    </div>
+    <div class="price-box"><div class="price-lbl">Precio estimado</div><div class="price-val" id="conf-price">$300–$600</div><div class="price-note">El precio final depende del trabajo realizado</div></div>
+    <div class="map-box"><svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.3" viewBox="0 0 375 88" preserveAspectRatio="none"><defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(13,13,13,.3)" stroke-width=".5"/></pattern></defs><rect width="375" height="88" fill="url(#g)"/></svg><svg width="24" height="28" viewBox="0 0 24 28"><circle cx="12" cy="11" r="9" fill="#E8531A"/><circle cx="12" cy="11" r="4" fill="white"/></svg></div>
+    <div class="map-addr">Col. Tres Ríos, Culiacán · Sinaloa</div>
+    <button class="btn btn-orange" id="btn-confirm" onclick="doSolicitud()" style="margin-bottom:8px;">Enviar solicitud →</button>
+    <button class="btn btn-outline" onclick="nav('screen-svc')">Modificar</button>
+  </div>
+</div>
+
+<!-- ══ SOLICITUD ENVIADA ══ -->
+<div class="screen" id="screen-sent">
+  <div class="status"><span class="status-time" style="color:var(--black)">9:41</span><div class="status-dots"><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div><div class="status-dot" style="background:var(--black)"></div></div></div>
+  <div class="sent-body">
+    <div class="sent-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#F5F2ED" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+    <div style="font-weight:800;font-size:25px;color:var(--black);letter-spacing:-.02em;line-height:1.15;text-align:center;">¡Solicitud<br>enviada!</div>
+    <div style="font-size:13px;color:var(--mid);line-height:1.6;max-width:240px;text-align:center;" id="sent-msg">Carlos Meza tiene 5 minutos para confirmar. Te avisamos por WhatsApp.</div>
+    <div style="background:var(--orange);color:white;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:10px 20px;border-radius:20px;" id="sent-eta">Llegada estimada · 18 min</div>
+    <div style="background:var(--cream);border-radius:14px;padding:14px 18px;width:100%;">
+      <div class="field-label" style="margin-bottom:8px;">Tu técnico</div>
+      <div style="display:flex;align-items:center;gap:12px;"><div style="width:40px;height:40px;border-radius:11px;background:var(--black);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:var(--white);" id="sent-av">CM</div><div><div style="font-weight:700;font-size:13px;color:var(--black);" id="sent-nm">Carlos Meza</div><div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);">TÉCNICO VERIFICADO</div></div></div>
+    </div>
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--mid);letter-spacing:.1em;" id="sent-folio">Folio #FX-2026-0001</div>
+    <button class="btn btn-black" style="width:100%;" onclick="nav('screen-home')">Volver al inicio</button>
+  </div>
+</div>
+
+<!-- ══ ADMIN PANEL ══ -->
+<div class="screen" id="screen-admin">
+  <div class="adm-hero">
+    <div class="status"><span class="status-time" style="color:#F5F2ED">9:41</span><div class="status-dots"><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div><div class="status-dot" style="background:#F5F2ED"></div></div></div>
+    <div style="padding:4px 24px 0;">
+      <div class="adm-title">FIXo Admin</div>
+      <div class="adm-sub">Panel de control · Landfall Studios</div>
+    </div>
+  </div>
+  <div class="adm-body">
+    <div class="metrics">
+      <div class="metric accent"><div class="metric-val" id="adm-usuarios">—</div><div class="metric-lbl">Usuarios totales</div></div>
+      <div class="metric"><div class="metric-val" id="adm-servicios">—</div><div class="metric-lbl">Servicios totales</div></div>
+      <div class="metric"><div class="metric-val" id="adm-clientes">—</div><div class="metric-lbl">Clientes</div></div>
+      <div class="metric"><div class="metric-val" id="adm-tecnicos">—</div><div class="metric-lbl">Técnicos</div></div>
+      <div class="metric"><div class="metric-val" id="adm-pendientes">—</div><div class="metric-lbl">Pendientes</div></div>
+      <div class="metric"><div class="metric-val" id="adm-completados">—</div><div class="metric-lbl">Completados</div></div>
+    </div>
+    <div class="adm-sec">
+      <div class="adm-sec-title">Usuarios registrados</div>
+      <div id="adm-users-list"><div class="adm-empty">Cargando...</div></div>
+    </div>
+    <div class="adm-sec">
+      <div class="adm-sec-title">Servicios recientes</div>
+      <div id="adm-svc-list"><div class="adm-empty">Cargando...</div></div>
+    </div>
+  </div>
+  <div class="adm-bot">
+    <button class="btn btn-red" onclick="doLogout()">Cerrar sesión</button>
+  </div>
+</div>
+
+</div><!-- /app -->
+
+<script>
+// ── SUPABASE ──
+const SUPABASE_URL = 'https://zvheieedjqguvgsucsyh.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_iFWtRQmivexIrWLOm61Oow_tj8jUVFm';
+const { createClient } = supabase;
+const sb = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+// ── STATE ──
+let currentUser = null;
+let currentProfile = null;
+let termsAccepted = false;
+let selectedRole = 'cliente';
+const navHistory = [];
+let current = 'screen-splash';
+
+// ── INIT ──
+async function init() {
+  const { data: { session } } = await sb.auth.getSession();
+  if (session?.user) {
+    currentUser = session.user;
+    await loadProfile(session.user.id);
+    goHome();
+  }
+  document.getElementById('loader').classList.add('hide');
+
+  sb.auth.onAuthStateChange(async (event, session) => {
+    if (event === 'SIGNED_IN' && session?.user) {
+      currentUser = session.user;
+      await loadProfile(session.user.id);
+      goHome();
+    }
+    if (event === 'SIGNED_OUT') {
+      currentUser = null;
+      currentProfile = null;
+      nav('screen-splash');
+    }
+  });
+}
+
+// ── NAVIGATION ──
+function nav(to) {
+  const fromEl = document.getElementById(current);
+  const toEl = document.getElementById(to);
+  if (!toEl || to === current) return;
+  fromEl.classList.remove('active');
+  fromEl.classList.add('back');
+  toEl.classList.remove('back');
+  toEl.classList.add('active');
+  toEl.scrollTop = 0;
+  navHistory.push(current);
+  current = to;
+  setTimeout(() => fromEl.classList.remove('back'), 300);
+}
+
+function back() {
+  if (navHistory.length === 0) return;
+  const prev = navHistory.pop();
+  const fromEl = document.getElementById(current);
+  const toEl = document.getElementById(prev);
+  fromEl.classList.remove('active');
+  toEl.classList.add('active');
+  toEl.scrollTop = 0;
+  current = prev;
+}
+
+// ── TOAST ──
+function toast(msg, type = '') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'show ' + type;
+  setTimeout(() => t.className = '', 3000);
+}
+
+// ── ROLE ──
+function selectRole(role) {
+  document.getElementById('card-cliente').classList.toggle('selected', role === 'cliente');
+  document.getElementById('card-tecnico').classList.toggle('selected', role === 'tecnico');
+  selectedRole = role;
+  const badge = document.getElementById('role-badge');
+  if (badge) badge.textContent = role === 'cliente' ? 'Propietario' : 'Técnico';
+}
+
+function toggleTerms() {
+  termsAccepted = !termsAccepted;
+  const check = document.getElementById('terms-check');
+  check.classList.toggle('checked', termsAccepted);
+}
+
+// ── REGISTER ──
+async function doRegister() {
+  const nombre = document.getElementById('reg-nombre').value.trim();
+  const email = document.getElementById('reg-email').value.trim();
+  const password = document.getElementById('reg-password').value;
+  const telefono = document.getElementById('reg-telefono').value.trim();
+
+  if (!nombre) return toast('Ingresa tu nombre completo', 'error');
+  if (!email) return toast('Ingresa tu correo electrónico', 'error');
+  if (!password || password.length < 6) return toast('La contraseña debe tener mínimo 6 caracteres', 'error');
+  if (!termsAccepted) return toast('Acepta los términos de servicio', 'error');
+
+  const btn = document.getElementById('btn-register');
+  btn.disabled = true;
+  btn.textContent = 'Creando cuenta...';
+
+  const { data, error } = await sb.auth.signUp({
+    email,
+    password,
+    options: { data: { nombre, telefono, rol: selectedRole } }
+  });
+
+  if (error) {
+    btn.disabled = false;
+    btn.textContent = 'Crear cuenta →';
+    if (error.message.includes('already registered')) return toast('Este correo ya está registrado', 'error');
+    return toast(error.message, 'error');
+  }
+
+  if (data.user) {
+    // Guardar perfil en tabla profiles
+    await sb.from('profiles').upsert({
+      id: data.user.id,
+      nombre,
+      telefono: telefono ? '+52' + telefono.replace(/\s/g, '') : null,
+      rol: selectedRole
+    });
+    currentUser = data.user;
+    currentProfile = { nombre, telefono, rol: selectedRole };
+    toast('¡Cuenta creada! Bienvenido a FIXo', 'success');
+    goHome();
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Crear cuenta →';
+}
+
+// ── LOGIN ──
+async function doLogin() {
+  const email = document.getElementById('login-email').value.trim();
+  const password = document.getElementById('login-password').value;
+
+  if (!email) return toast('Ingresa tu correo electrónico', 'error');
+  if (!password) return toast('Ingresa tu contraseña', 'error');
+
+  const btn = document.getElementById('btn-login');
+  btn.disabled = true;
+  btn.textContent = 'Entrando...';
+
+  const { data, error } = await sb.auth.signInWithPassword({ email, password });
+
+  if (error) {
+    btn.disabled = false;
+    btn.textContent = 'Entrar →';
+    if (error.message.includes('Invalid login')) return toast('Correo o contraseña incorrectos', 'error');
+    return toast(error.message, 'error');
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Entrar →';
+}
+
+// ── FORGOT PASSWORD ──
+async function doForgotPassword() {
+  const email = document.getElementById('login-email').value.trim();
+  if (!email) return toast('Ingresa tu correo primero', 'error');
+  const { error } = await sb.auth.resetPasswordForEmail(email, {
+    redirectTo: 'https://julioolands.github.io/fixo-app/'
+  });
+  if (error) return toast(error.message, 'error');
+  toast('Te enviamos un correo para restablecer tu contraseña', 'success');
+}
+
+// ── LOGOUT ──
+async function doLogout() {
+  await sb.auth.signOut();
+  toast('Sesión cerrada', '');
+}
+
+// ── LOAD PROFILE ──
+async function loadProfile(userId) {
+  const { data } = await sb.from('profiles').select('*').eq('id', userId).single();
+  if (data) {
+    currentProfile = data;
+  } else {
+    // Si no hay perfil, usar metadata del usuario
+    const meta = currentUser?.user_metadata || {};
+    currentProfile = {
+      nombre: meta.nombre || currentUser?.email?.split('@')[0] || 'Usuario',
+      telefono: meta.telefono || null,
+      rol: meta.rol || 'cliente'
+    };
+  }
+}
+
+// ── GO HOME (según rol) ──
+function goHome() {
+  const nombre = currentProfile?.nombre || 'Usuario';
+  const rol = currentProfile?.rol || 'cliente';
+  const initials = nombre.split(' ').map(n => n[0]).join('').toUpperCase().slice(0,2);
+
+  if (rol === 'tecnico') {
+    document.getElementById('tec-nombre').textContent = nombre.split(' ')[0];
+    nav('screen-tecnico');
+  } else {
+    document.getElementById('home-nombre').textContent = nombre.split(' ')[0];
+    document.getElementById('home-avatar').textContent = initials;
+    nav('screen-home');
+  }
+
+  // Actualizar pantalla de perfil
+  document.getElementById('perfil-av').textContent = initials;
+  document.getElementById('perfil-nombre').textContent = nombre;
+  document.getElementById('perfil-email').textContent = currentUser?.email || '';
+  document.getElementById('perfil-rol').textContent = rol === 'tecnico' ? 'Técnico' : 'Propietario';
+  document.getElementById('perfil-item-nombre').textContent = nombre;
+  document.getElementById('perfil-item-email').textContent = currentUser?.email || '';
+  document.getElementById('perfil-item-tel').textContent = currentProfile?.telefono || 'No registrado';
+  document.getElementById('perfil-item-rol').textContent = rol === 'tecnico' ? 'Técnico' : 'Propietario';
+}
+
+// ── GO HOME actualizado (incluye admin) ──
+function goHome() {
+  const nombre = currentProfile?.nombre || 'Usuario';
+  const rol = currentProfile?.rol || 'cliente';
+  const initials = nombre.split(' ').map(n => n[0]).join('').toUpperCase().slice(0,2);
+
+  if (rol === 'admin') {
+    loadAdmin();
+    nav('screen-admin');
+  } else if (rol === 'tecnico') {
+    document.getElementById('tec-nombre').textContent = nombre.split(' ')[0];
+    nav('screen-tecnico');
+  } else {
+    document.getElementById('home-nombre').textContent = nombre.split(' ')[0];
+    document.getElementById('home-avatar').textContent = initials;
+    nav('screen-home');
+  }
+
+  // Perfil siempre actualizado
+  const pfAv = document.getElementById('perfil-av');
+  if (pfAv) pfAv.textContent = initials;
+  const pfNm = document.getElementById('perfil-nombre');
+  if (pfNm) pfNm.textContent = nombre;
+  const pfEm = document.getElementById('perfil-email');
+  if (pfEm) pfEm.textContent = currentUser?.email || '';
+  const pfRl = document.getElementById('perfil-rol');
+  if (pfRl) pfRl.textContent = rol === 'tecnico' ? 'Técnico' : rol === 'admin' ? 'Admin' : 'Propietario';
+  const pfIn = document.getElementById('perfil-item-nombre');
+  if (pfIn) pfIn.textContent = nombre;
+  const pfIe = document.getElementById('perfil-item-email');
+  if (pfIe) pfIe.textContent = currentUser?.email || '';
+  const pfIt = document.getElementById('perfil-item-tel');
+  if (pfIt) pfIt.textContent = currentProfile?.telefono || 'No registrado';
+  const pfIr = document.getElementById('perfil-item-rol');
+  if (pfIr) pfIr.textContent = rol === 'tecnico' ? 'Técnico' : rol === 'admin' ? 'Admin' : 'Propietario';
+}
+
+// ── STATE SOLICITUD ──
+let selSvcNm = 'Plomería', selSvcPrice = '$300–$600';
+let selTechNm = 'Carlos Meza', selTechEta = '18';
+let selUrgNm = 'Hoy';
+
+// ── SOLICITUD UI ──
+function selSvcCard(el, nm, price) {
+  document.querySelectorAll('.svc-card').forEach(c => c.classList.remove('sel'));
+  el.classList.add('sel');
+  selSvcNm = nm; selSvcPrice = price;
+  document.getElementById('conf-svc').textContent = nm;
+  document.getElementById('conf-price').textContent = price;
+}
+
+function selUrg(el) {
+  document.querySelectorAll('.urg-btn').forEach(b => b.classList.remove('sel'));
+  el.classList.add('sel');
+  selUrgNm = el.textContent;
+  document.getElementById('conf-urg').textContent = el.textContent;
+}
+
+function selTech(el, nm, eta) {
+  document.querySelectorAll('.tech-card').forEach(c => c.classList.remove('sel'));
+  el.classList.add('sel');
+  selTechNm = nm; selTechEta = eta;
+  document.getElementById('btn-tech').textContent = 'Continuar con ' + nm + ' →';
+  document.getElementById('conf-tech').textContent = nm;
+  document.getElementById('conf-eta').textContent = '~' + eta + ' minutos';
+}
+
+// ── ENVIAR SOLICITUD ──
+async function doSolicitud() {
+  if (!currentUser) return toast('Inicia sesión primero', 'error');
+  const btn = document.getElementById('btn-confirm');
+  btn.disabled = true; btn.textContent = 'Enviando...';
+  const desc = document.getElementById('svc-desc').value.trim() || 'Sin descripción';
+  const folio = 'FX-' + Date.now().toString().slice(-6);
+
+  const { error } = await sb.from('solicitudes').insert({
+    cliente_id: currentUser.id,
+    cliente_nombre: currentProfile?.nombre || 'Cliente',
+    tecnico_nombre: selTechNm,
+    servicio: selSvcNm,
+    descripcion: desc,
+    urgencia: selUrgNm,
+    direccion: 'Col. Tres Ríos, Culiacán',
+    precio_estimado: selSvcPrice,
+    estado: 'nueva'
+  });
+
+  btn.disabled = false; btn.textContent = 'Enviar solicitud →';
+
+  if (error) return toast('Error al enviar: ' + error.message, 'error');
+
+  // Actualizar pantalla enviada
+  document.getElementById('sent-msg').textContent = selTechNm + ' tiene 5 minutos para confirmar. Te avisamos por WhatsApp.';
+  document.getElementById('sent-eta').textContent = 'Llegada estimada · ' + selTechEta + ' min';
+  document.getElementById('sent-av').textContent = selTechNm.split(' ').map(n => n[0]).join('').toUpperCase();
+  document.getElementById('sent-nm').textContent = selTechNm;
+  document.getElementById('sent-folio').textContent = 'Folio #' + folio;
+  toast('¡Solicitud enviada!', 'success');
+  nav('screen-sent');
+}
+
+// ── MIS SERVICIOS ──
+async function loadMisServicios() {
+  if (!currentUser) return;
+  const list = document.getElementById('mis-svc-list');
+  list.innerHTML = '<div style="text-align:center;padding:36px;font-family:\'DM Mono\',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);">Cargando...</div>';
+
+  const { data, error } = await sb.from('solicitudes')
+    .select('*')
+    .eq('cliente_id', currentUser.id)
+    .order('created_at', { ascending: false });
+
+  if (error || !data?.length) {
+    list.innerHTML = '<div style="text-align:center;padding:48px 20px;"><div style="font-family:\'DM Mono\',monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);">Sin servicios aún</div><div style="font-size:13px;color:var(--mid);margin-top:8px;">Tus solicitudes aparecerán aquí</div></div>';
+    return;
+  }
+
+  const tagMap = { nueva: 'tag-nueva', completada: 'tag-completada', cancelada: 'tag-cancelada', aceptada: 'tag-nueva', en_curso: 'tag-nueva' };
+  const labelMap = { nueva: 'Nueva', completada: 'Completada', cancelada: 'Cancelada', aceptada: 'Aceptada', en_curso: 'En curso' };
+
+  list.innerHTML = data.map(s => `
+    <div class="msvc-card">
+      <div class="msvc-top">
+        <div class="msvc-nm">${s.servicio}</div>
+        <div class="msvc-tag ${tagMap[s.estado] || 'tag-nueva'}">${labelMap[s.estado] || s.estado}</div>
+      </div>
+      <div class="msvc-det">TÉCNICO · ${s.tecnico_nombre}</div>
+      <div class="msvc-det">URGENCIA · ${s.urgencia} · ${s.precio_estimado}</div>
+      <div class="msvc-det">${new Date(s.created_at).toLocaleDateString('es-MX', {day:'numeric',month:'short',year:'numeric'})}</div>
+    </div>
+  `).join('');
+}
+
+// ── ADMIN ──
+async function loadAdmin() {
+  // Cargar usuarios
+  const { data: profiles } = await sb.from('profiles').select('*').order('created_at', { ascending: false });
+  const { data: solicitudes } = await sb.from('solicitudes').select('*').order('created_at', { ascending: false });
+
+  const usuarios = profiles || [];
+  const svcs = solicitudes || [];
+  const clientes = usuarios.filter(u => u.rol === 'cliente').length;
+  const tecnicos = usuarios.filter(u => u.rol === 'tecnico').length;
+  const pendientes = svcs.filter(s => s.estado === 'nueva' || s.estado === 'aceptada' || s.estado === 'en_curso').length;
+  const completados = svcs.filter(s => s.estado === 'completada').length;
+
+  document.getElementById('adm-usuarios').textContent = usuarios.length;
+  document.getElementById('adm-servicios').textContent = svcs.length;
+  document.getElementById('adm-clientes').textContent = clientes;
+  document.getElementById('adm-tecnicos').textContent = tecnicos;
+  document.getElementById('adm-pendientes').textContent = pendientes;
+  document.getElementById('adm-completados').textContent = completados;
+
+  // Lista usuarios
+  const uList = document.getElementById('adm-users-list');
+  if (!usuarios.length) {
+    uList.innerHTML = '<div class="adm-empty">Sin usuarios registrados</div>';
+  } else {
+    uList.innerHTML = usuarios.map(u => {
+      const initials = (u.nombre || 'U').split(' ').map(n => n[0]).join('').toUpperCase().slice(0,2);
+      const tagCls = u.rol === 'tecnico' ? 'tc' : u.rol === 'admin' ? 'ad' : 'cl';
+      const avCls = u.rol === 'tecnico' ? 'tc' : u.rol === 'admin' ? 'ad' : '';
+      const label = u.rol === 'tecnico' ? 'Técnico' : u.rol === 'admin' ? 'Admin' : 'Cliente';
+      return `<div class="u-row">
+        <div class="u-av ${avCls}">${initials}</div>
+        <div class="u-inf">
+          <div class="u-nm">${u.nombre || 'Sin nombre'}</div>
+          <div class="u-em">${new Date(u.created_at).toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'numeric'})}</div>
+        </div>
+        <div class="u-tag ${tagCls}">${label}</div>
+      </div>`;
+    }).join('');
+  }
+
+  // Lista servicios
+  const sList = document.getElementById('adm-svc-list');
+  const tagMap = { nueva: 'tag-nueva', completada: 'tag-completada', cancelada: 'tag-cancelada', aceptada: 'tag-nueva', en_curso: 'tag-nueva' };
+  const labelMap = { nueva: 'Nueva', completada: 'Completada', cancelada: 'Cancelada', aceptada: 'Aceptada', en_curso: 'En curso' };
+  if (!svcs.length) {
+    sList.innerHTML = '<div class="adm-empty">Sin servicios registrados</div>';
+  } else {
+    sList.innerHTML = svcs.map(s => `
+      <div class="sv-row">
+        <div class="sv-top">
+          <div class="sv-nm">${s.servicio} · ${s.cliente_nombre}</div>
+          <div class="msvc-tag ${tagMap[s.estado] || 'tag-nueva'}">${labelMap[s.estado] || s.estado}</div>
+        </div>
+        <div class="sv-det">TÉCNICO · ${s.tecnico_nombre} · ${s.precio_estimado}</div>
+        <div class="sv-det">${new Date(s.created_at).toLocaleDateString('es-MX',{day:'numeric',month:'short',year:'numeric'})}</div>
+      </div>
+    `).join('');
+  }
+}
+
+// ── UI HELPERS ──
+function selCat(el) {
+  document.querySelectorAll('.cat').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function toggleOnline(btn) {
+  const on = btn.textContent.trim() === 'En línea';
+  btn.textContent = on ? 'Descanso' : 'En línea';
+  btn.style.background = on ? 'rgba(245,242,237,.15)' : '#E8531A';
+}
+
+// ── NAV con carga de datos ──
+const _navOrig = nav;
+function nav(to) {
+  _navOrig(to);
+  if (to === 'screen-mis-servicios') loadMisServicios();
+  if (to === 'screen-admin') loadAdmin();
+}
+
+// ── PWA ──
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+
+// ── START ──
+init();
+</script>
+</body>
+</html>#loader.hide{opacity:0;pointer-events:none;}
+.loader-logo{display:flex;align-items:baseline;}
+.loader-logo .fix{font-weight:800;font-size:56px;color:var(--white);letter-spacing:-.03em;}
+.loader-logo .o{font-family:'DM Serif Display',serif;font-style:italic;font-size:56px;color:var(--orange);letter-spacing:-.03em;}
+.loader-spinner{width:24px;height:24px;border:2px solid rgba(245,242,237,.2);border-top-color:var(--orange);border-radius:50%;animation:spin .8s linear infinite;margin-top:24px;}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── STATUS BAR ── */
+.status{display:flex;justify-content:space-between;align-items:center;padding:14px 24px 6px;flex-shrink:0;}
+.status-time{font-weight:700;font-size:13px;}
+.status-dots{display:flex;gap:5px;}
+.status-dot{width:5px;height:5px;border-radius:50%;opacity:.7;}
+
+/* ── BUTTONS ── */
+.btn{width:100%;border:none;border-radius:14px;padding:16px;font-family:'Syne',sans-serif;font-weight:700;font-size:15px;cursor:pointer;text-align:center;transition:opacity .15s;}
+.btn:active{opacity:.8;}
+.btn:disabled{opacity:.5;cursor:not-allowed;}
+.btn-orange{background:var(--orange);color:white;}
+.btn-black{background:var(--black);color:var(--white);}
+.btn-ghost{background:rgba(245,242,237,.08);color:var(--white);border:.5px solid rgba(245,242,237,.2);}
+.btn-outline{background:transparent;color:var(--black);border:.5px solid rgba(13,13,13,.2);}
 
 /* ── FIELDS ── */
 .field-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);margin-bottom:7px;}
